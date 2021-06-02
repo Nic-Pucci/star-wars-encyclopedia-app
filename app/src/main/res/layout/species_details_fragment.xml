@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragments.detailFragments.FilmDetailsFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/content_padding">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/name_text_view"
+            style="@style/TextAppearance.MaterialComponents.Headline5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:gravity="center_horizontal"
+            android:text="Name ..." />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/classification_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_spacing"
+            android:text="Classification: ..." />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/designation_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_spacing"
+            android:text="Designation: ..." />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/average_height_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_spacing"
+            android:text="Average Height: ..." />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/average_lifespan_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_spacing"
+            android:text="Average Lifespan: ..." />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/eye_colors_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_spacing"
+            android:text="Eye Colors: ..." />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/hair_colors_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_spacing"
+            android:text="Hair Colors: ..." />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/skin_colors_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_spacing"
+            android:text="Skin Colors: ..." />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/language_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_spacing"
+            android:text="Language: ..." />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:layout_marginTop="@dimen/section_spacing"
+            android:text="Links:" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/films_button"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_spacing"
+            android:text="Films" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/homeworld_button"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_spacing"
+            android:text="Homeworld" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/people_button"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_spacing"
+            android:text="People" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/created_date_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_spacing"
+            android:text="Created: ..." />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/edited_date_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_spacing"
+            android:text="Last Edit: ..." />
+
+    </LinearLayout>
+
+</ScrollView>

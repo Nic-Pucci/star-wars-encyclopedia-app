@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragments.detailFragments.FilmDetailsFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/content_padding">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/name_text_view"
+            style="@style/TextAppearance.MaterialComponents.Headline5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:gravity="center_horizontal"
+            android:text="Name ..." />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/diameter_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_spacing"
+            android:text="Diameter: ..." />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/rotational_period_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_spacing"
+            android:text="Rotational Period: ..." />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/orbital_period_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_spacing"
+            android:text="Obital Period: ..." />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/gravity_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_spacing"
+            android:text="Gravity: ..." />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/climate_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_spacing"
+            android:text="Climate: ..." />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/terrain_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_spacing"
+            android:text="Terrain: ..." />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/surface_water_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_spacing"
+            android:text="Suface Water: ..." />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:layout_marginTop="@dimen/section_spacing"
+            android:text="Links:" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/films_button"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_spacing"
+            android:text="Films" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/residents_button"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_spacing"
+            android:text="Residents" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/created_date_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_spacing"
+            android:text="Created: ..." />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/edited_date_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_spacing"
+            android:text="Last Edit: ..." />
+
+    </LinearLayout>
+
+</ScrollView>

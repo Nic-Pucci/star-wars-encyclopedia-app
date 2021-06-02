@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".fragments.detailFragments.FilmDetailsFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/content_padding">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/name_text_view"
+            style="@style/TextAppearance.MaterialComponents.Headline5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:gravity="center_horizontal"
+            android:text="Name ..." />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/model_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_spacing"
+            android:text="Model: ..." />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/starship_class_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_spacing"
+            android:text="Starship Class: ..." />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/manufacturer_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_spacing"
+            android:text="Manufacturer: ..." />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/cost_in_credits_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_spacing"
+            android:text="Cost in Credits: ..." />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/length_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_spacing"
+            android:text="Length: ..." />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/passengers_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_spacing"
+            android:text="Passengers: ..." />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/max_atmosphering_speed_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_spacing"
+            android:text="Max Atmosphering Speed: ..." />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/hyperdrive_rating_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_spacing"
+            android:text="Hyperdrive Rating: ..." />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/mglt_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_spacing"
+            android:text="MGLT: ..." />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/cargo_capacity_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_spacing"
+            android:text="Cargo Capacity: ..." />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/consumables_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_spacing"
+            android:text="Consumables: ..." />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:layout_marginTop="@dimen/section_spacing"
+            android:text="Links:" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/films_button"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_spacing"
+            android:text="Films" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/pilots_button"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_spacing"
+            android:text="Pilots" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/created_date_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_spacing"
+            android:text="Created: ..." />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/edited_date_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/section_spacing"
+            android:text="Last Edit: ..." />
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/home_fragment">
+
+    <fragment
+        android:id="@+id/home_fragment"
+        android:name="com.npucci.starwarsencyclopediaapp.fragments.HomeFragment"
+        android:label="Get Started"
+        tools:layout="@layout/home_fragment">
+        <action
+            android:id="@+id/action_main_fragment_to_films_fragment"
+            app:destination="@id/films_list_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/films_list_fragment"
+        android:name="com.npucci.starwarsencyclopediaapp.fragments.listFragments.FilmsListFragment"
+        android:label="Films"
+        tools:layout="@layout/films_list_fragment" >
+        <argument
+            android:name="filmIDs"
+            app:argType="integer[]" />
+        <action
+            android:id="@+id/action_films_fragment_to_film_fragment"
+            app:destination="@id/film_details_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/film_details_fragment"
+        android:name="com.npucci.starwarsencyclopediaapp.fragments.detailFragments.FilmDetailsFragment"
+        android:label="Film Details"
+        tools:layout="@layout/film_details_fragment" >
+        <argument
+            android:name="film"
+            app:argType="com.npucci.starwarsencyclopediaapp.pojos.Film" />
+        <action
+            android:id="@+id/action_film_details_fragment_to_characters_list_fragment"
+            app:destination="@id/characters_list_fragment" />
+        <action
+            android:id="@+id/action_film_details_fragment_to_species_list_fragment"
+            app:destination="@id/species_list_fragment" />
+        <action
+            android:id="@+id/action_film_details_fragment_to_planets_list_fragment"
+            app:destination="@id/planets_list_fragment" />
+        <action
+            android:id="@+id/action_film_details_fragment_to_vehicles_list_fragment"
+            app:destination="@id/vehicles_list_fragment" />
+        <action
+            android:id="@+id/action_film_details_fragment_to_starships_list_fragment"
+            app:destination="@id/starships_list_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/person_details_fragment"
+        android:name="com.npucci.starwarsencyclopediaapp.fragments.detailFragments.PersonDetailsFragment"
+        android:label="Character Details"
+        tools:layout="@layout/person_details_fragment">
+        <argument
+            android:name="person"
+            app:argType="com.npucci.starwarsencyclopediaapp.pojos.Person" />
+        <action
+            android:id="@+id/action_person_details_fragment_to_films_list_fragment"
+            app:destination="@id/films_list_fragment" />
+        <action
+            android:id="@+id/action_person_details_fragment_to_planets_list_fragment"
+            app:destination="@id/planets_list_fragment" />
+        <action
+            android:id="@+id/action_person_details_fragment_to_species_list_fragment"
+            app:destination="@id/species_list_fragment" />
+        <action
+            android:id="@+id/action_person_details_fragment_to_starships_list_fragment"
+            app:destination="@id/starships_list_fragment" />
+        <action
+            android:id="@+id/action_person_details_fragment_to_vehicles_list_fragment"
+            app:destination="@id/vehicles_list_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/planet_details_fragment"
+        android:name="com.npucci.starwarsencyclopediaapp.fragments.detailFragments.PlanetDetailsFragment"
+        android:label="Planet Details"
+        tools:layout="@layout/planet_details_fragment" >
+        <argument android:name="planet"
+            app:argType="com.npucci.starwarsencyclopediaapp.pojos.Planet" />
+        <action
+            android:id="@+id/action_planet_details_fragment_to_films_list_fragment"
+            app:destination="@id/films_list_fragment" />
+        <action
+            android:id="@+id/action_planet_details_fragment_to_characters_list_fragment"
+            app:destination="@id/characters_list_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/species_details_fragment"
+        android:name="com.npucci.starwarsencyclopediaapp.fragments.detailFragments.SpeciesDetailsFragment"
+        android:label="Species Details"
+        tools:layout="@layout/species_details_fragment" >
+        <argument
+            android:name="species"
+            app:argType="com.npucci.starwarsencyclopediaapp.pojos.Species" />
+        <action
+            android:id="@+id/action_species_details_fragment_to_characters_list_fragment"
+            app:destination="@id/characters_list_fragment" />
+        <action
+            android:id="@+id/action_species_details_fragment_to_films_list_fragment"
+            app:destination="@id/films_list_fragment" />
+        <action
+            android:id="@+id/action_species_details_fragment_to_planets_list_fragment"
+            app:destination="@id/planets_list_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/starship_details_fragment"
+        android:name="com.npucci.starwarsencyclopediaapp.fragments.detailFragments.StarshipDetailsFragment"
+        android:label="Starship Details"
+        tools:layout="@layout/starship_details_fragment">
+        <argument
+            android:name="starship"
+            app:argType="com.npucci.starwarsencyclopediaapp.pojos.Starship" />
+        <action
+            android:id="@+id/action_starship_details_fragment_to_films_list_fragment"
+            app:destination="@id/films_list_fragment" />
+        <action
+            android:id="@+id/action_starship_details_fragment_to_people_list_fragment"
+            app:destination="@id/characters_list_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/vehicle_details_fragment"
+        android:name="com.npucci.starwarsencyclopediaapp.fragments.detailFragments.VehicleDetailsFragment"
+        android:label="Vehicle Details"
+        tools:layout="@layout/vehicle_details_fragment" >
+        <argument
+            android:name="vehicle"
+            app:argType="com.npucci.starwarsencyclopediaapp.pojos.Vehicle" />
+        <action
+            android:id="@+id/action_vehicle_details_fragment_to_people_list_fragment"
+            app:destination="@id/characters_list_fragment" />
+        <action
+            android:id="@+id/action_vehicle_details_fragment_to_films_list_fragment"
+            app:destination="@id/films_list_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/characters_list_fragment"
+        android:name="com.npucci.starwarsencyclopediaapp.fragments.listFragments.CharactersListFragment"
+        android:label="Characters"
+        tools:layout="@layout/characters_list_fragment" >
+        <action
+            android:id="@+id/action_characters_list_fragment_to_person_details_fragment"
+            app:destination="@id/person_details_fragment" />
+        <argument
+            android:name="characterIDs"
+            app:argType="integer[]" />
+    </fragment>
+    <fragment
+        android:id="@+id/species_list_fragment"
+        android:name="com.npucci.starwarsencyclopediaapp.fragments.listFragments.SpeciesListFragment"
+        android:label="Species"
+        tools:layout="@layout/species_list_fragment" >
+        <action
+            android:id="@+id/action_speciesListFragment_to_species_details_fragment"
+            app:destination="@id/species_details_fragment" />
+        <argument
+            android:name="speciesIDs"
+            app:argType="integer[]" />
+    </fragment>
+    <fragment
+        android:id="@+id/planets_list_fragment"
+        android:name="com.npucci.starwarsencyclopediaapp.fragments.listFragments.PlanetsListFragment"
+        android:label="Planets"
+        tools:layout="@layout/planets_list_fragment" >
+        <action
+            android:id="@+id/action_planetsListFragment_to_planet_details_fragment"
+            app:destination="@id/planet_details_fragment" />
+        <argument
+            android:name="planetIDs"
+            app:argType="integer[]" />
+    </fragment>
+    <fragment
+        android:id="@+id/vehicles_list_fragment"
+        android:name="com.npucci.starwarsencyclopediaapp.fragments.listFragments.VehiclesListFragment"
+        android:label="Vehicles"
+        tools:layout="@layout/vehicles_list_fragment" >
+        <action
+            android:id="@+id/action_vehiclesListFragment_to_vehicle_details_fragment"
+            app:destination="@id/vehicle_details_fragment" />
+        <argument
+            android:name="vehicleIDs"
+            app:argType="integer[]" />
+    </fragment>
+    <fragment
+        android:id="@+id/starships_list_fragment"
+        android:name="com.npucci.starwarsencyclopediaapp.fragments.listFragments.StarshipsListFragment"
+        android:label="starships"
+        tools:layout="@layout/starships_list_fragment" >
+        <action
+            android:id="@+id/action_starshipsListFragment_to_starship_details_fragment"
+            app:destination="@id/starship_details_fragment" />
+        <argument
+            android:name="starshipIDs"
+            app:argType="integer[]" />
+    </fragment>
+</navigation>
