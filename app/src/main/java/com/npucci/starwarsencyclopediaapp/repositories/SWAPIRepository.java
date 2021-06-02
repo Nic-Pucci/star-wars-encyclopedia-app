@@ -171,7 +171,7 @@ public class SWAPIRepository {
                 DataResults<T> dataResults = response.body();
 
                 List<T> dataList = dataResults.getResults();
-                Collections.sort(dataList, ((item1, item2) -> item1.getSortValue().compareToIgnoreCase(item2.getSortValue())));
+                //Collections.sort(dataList, ((item1, item2) -> item1.getSortValue().compareToIgnoreCase(item2.getSortValue())));
 
                 dataResults.setResults(dataList);
                 dataListLive.postValue(dataResults);

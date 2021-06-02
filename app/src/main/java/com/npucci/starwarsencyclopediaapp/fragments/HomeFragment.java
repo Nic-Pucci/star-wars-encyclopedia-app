@@ -30,9 +30,49 @@ public class HomeFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         final NavController navController = Navigation.findNavController(view);
+
+        Button browseCharactersButton = view.findViewById(R.id.browse_characters_button);
+        browseCharactersButton.setOnClickListener(v -> {
+            HomeFragmentDirections.ActionMainFragmentToCharactersFragment action =
+                    HomeFragmentDirections.actionMainFragmentToCharactersFragment(new int[0]);
+            NavControllerUtil.navigate(navController, action);
+        });
+
         Button browseFilmsButton = view.findViewById(R.id.browse_films_button);
         browseFilmsButton.setOnClickListener(v -> {
-            HomeFragmentDirections.ActionMainFragmentToFilmsFragment action = HomeFragmentDirections.actionMainFragmentToFilmsFragment(new int[0]);
+            HomeFragmentDirections.ActionMainFragmentToFilmsFragment action =
+                    HomeFragmentDirections.actionMainFragmentToFilmsFragment(new int[0]);
+            NavControllerUtil.navigate(navController, action);
+        });
+
+        Button browsePlanetsButton = view.findViewById(R.id.browse_planets_button);
+        browsePlanetsButton.setOnClickListener(v -> {
+            HomeFragmentDirections.ActionMainFragmentToPlanetsFragment action =
+                    HomeFragmentDirections.actionMainFragmentToPlanetsFragment(new int[0]);
+            NavControllerUtil.navigate(navController, action);
+        });
+
+
+        Button browseSpeciesButton = view.findViewById(R.id.browse_species_button);
+        browseSpeciesButton.setOnClickListener(v -> {
+            HomeFragmentDirections.ActionMainFragmentToSpeciesFragment action =
+                    HomeFragmentDirections.actionMainFragmentToSpeciesFragment(new int[0]);
+            NavControllerUtil.navigate(navController, action);
+        });
+
+
+        Button browseStarshipsButton = view.findViewById(R.id.browse_starships_button);
+        browseStarshipsButton.setOnClickListener(v -> {
+            HomeFragmentDirections.ActionMainFragmentToStarshipsFragment action =
+                    HomeFragmentDirections.actionMainFragmentToStarshipsFragment(new int[0]);
+            NavControllerUtil.navigate(navController, action);
+        });
+
+
+        Button browseVehiclesButton = view.findViewById(R.id.browse_vehicles_button);
+        browseVehiclesButton.setOnClickListener(v -> {
+            HomeFragmentDirections.ActionMainFragmentToVehiclesFragment action =
+                    HomeFragmentDirections.actionMainFragmentToVehiclesFragment(new int[0]);
             NavControllerUtil.navigate(navController, action);
         });
     }

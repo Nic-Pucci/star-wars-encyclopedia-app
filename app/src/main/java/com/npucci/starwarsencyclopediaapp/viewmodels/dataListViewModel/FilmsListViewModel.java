@@ -1,4 +1,4 @@
-package com.npucci.starwarsencyclopediaapp.viewmodels.dataViewModels;
+package com.npucci.starwarsencyclopediaapp.viewmodels.dataListViewModel;
 
 import android.text.TextUtils;
 

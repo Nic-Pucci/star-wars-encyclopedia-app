@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -63,6 +64,10 @@ public class PlanetsListFragment extends Fragment {
                         PlanetsListFragmentDirections.actionPlanetsListFragmentToPlanetDetailsFragment(selectedPlanet);
                 NavControllerUtil.navigate(navController, action);
             });
+        });
+
+        planetListViewModel.getErrorLive().observe(getViewLifecycleOwner(), errorMessage -> {
+            Toast.makeText(getContext(), errorMessage, Toast.LENGTH_LONG).show();
         });
     }
 }

@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -23,7 +24,7 @@ import com.npucci.starwarsencyclopediaapp.R;
 import com.npucci.starwarsencyclopediaapp.pojos.Film;
 import com.npucci.starwarsencyclopediaapp.pojos.dataResults.DataResults;
 import com.npucci.starwarsencyclopediaapp.utilities.NavControllerUtil;
-import com.npucci.starwarsencyclopediaapp.viewmodels.dataViewModels.FilmsListViewModel;
+import com.npucci.starwarsencyclopediaapp.viewmodels.dataListViewModel.FilmsListViewModel;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -74,6 +75,10 @@ public class FilmsListFragment extends Fragment {
                 NavControllerUtil.navigate(navController, action);
             });
         });
+
+        filmsListViewModel.getErrorLive().observe(getViewLifecycleOwner(), errorMessage -> {
+            Toast.makeText(getContext(), errorMessage, Toast.LENGTH_LONG).show();
+        });
     }
 
     @Override
@@ -120,6 +125,5 @@ public class FilmsListFragment extends Fragment {
                 return true;
             }
         });
-        
     }
 }

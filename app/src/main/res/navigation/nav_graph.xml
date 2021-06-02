@@ -13,6 +13,21 @@
         <action
             android:id="@+id/action_main_fragment_to_films_fragment"
             app:destination="@id/films_list_fragment" />
+        <action
+            android:id="@+id/action_main_fragment_to_characters_fragment"
+            app:destination="@id/characters_list_fragment" />
+        <action
+            android:id="@+id/action_main_fragment_to_starships_fragment"
+            app:destination="@id/starships_list_fragment" />
+        <action
+            android:id="@+id/action_main_fragment_to_vehicles_fragment"
+            app:destination="@id/vehicles_list_fragment" />
+        <action
+            android:id="@+id/action_main_fragment_to_species_fragment"
+            app:destination="@id/species_list_fragment" />
+        <action
+            android:id="@+id/action_main_fragment_to_planets_fragment"
+            app:destination="@id/planets_list_fragment" />
     </fragment>
     <fragment
         android:id="@+id/films_list_fragment"
