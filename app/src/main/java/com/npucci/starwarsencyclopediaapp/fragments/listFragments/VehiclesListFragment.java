@@ -15,13 +15,10 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
 import com.npucci.starwarsencyclopediaapp.R;
-import com.npucci.starwarsencyclopediaapp.pojos.Film;
-import com.npucci.starwarsencyclopediaapp.pojos.Person;
 import com.npucci.starwarsencyclopediaapp.pojos.Vehicle;
 import com.npucci.starwarsencyclopediaapp.utilities.NavControllerUtil;
 import com.npucci.starwarsencyclopediaapp.viewmodels.dataListViewModel.VehiclesListViewModel;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -52,7 +49,7 @@ public class VehiclesListFragment extends Fragment {
 
         VehiclesListFragmentArgs args = VehiclesListFragmentArgs.fromBundle(getArguments());
         int[] vehicleIDs = args.getVehicleIDs();
-        vehiclesListViewModel.getDataListLive(vehicleIDs).observe(getViewLifecycleOwner(), dataResults -> {
+        vehiclesListViewModel.updateDataResultsLive(vehicleIDs).observe(getViewLifecycleOwner(), dataResults -> {
             List<Vehicle> vehiclesList = dataResults.getResults();
 
             List<String> vehicleDisplayStrings = vehiclesList.stream().map(vehicle -> vehicle.getName()).collect(Collectors.toList());

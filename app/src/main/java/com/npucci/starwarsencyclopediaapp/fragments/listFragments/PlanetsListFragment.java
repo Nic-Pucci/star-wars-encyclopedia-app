@@ -15,12 +15,10 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
 import com.npucci.starwarsencyclopediaapp.R;
-import com.npucci.starwarsencyclopediaapp.pojos.Film;
 import com.npucci.starwarsencyclopediaapp.pojos.Planet;
 import com.npucci.starwarsencyclopediaapp.utilities.NavControllerUtil;
 import com.npucci.starwarsencyclopediaapp.viewmodels.dataListViewModel.PlanetListViewModel;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -51,7 +49,7 @@ public class PlanetsListFragment extends Fragment {
 
         PlanetsListFragmentArgs args = PlanetsListFragmentArgs.fromBundle(getArguments());
         int[] planetIDs = args.getPlanetIDs();
-        planetListViewModel.getDataListLive(planetIDs).observe(getViewLifecycleOwner(), dataResults -> {
+        planetListViewModel.updateDataResultsLive(planetIDs).observe(getViewLifecycleOwner(), dataResults -> {
             List<Planet> planetList = dataResults.getResults();
 
             List<String> planetsDisplayStrings = planetList.stream().map(planet -> planet.getName()).collect(Collectors.toList());

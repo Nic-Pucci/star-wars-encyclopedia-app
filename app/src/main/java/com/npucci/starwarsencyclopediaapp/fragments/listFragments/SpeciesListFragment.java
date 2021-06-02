@@ -15,13 +15,10 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
 import com.npucci.starwarsencyclopediaapp.R;
-import com.npucci.starwarsencyclopediaapp.pojos.Film;
-import com.npucci.starwarsencyclopediaapp.pojos.Person;
 import com.npucci.starwarsencyclopediaapp.pojos.Species;
 import com.npucci.starwarsencyclopediaapp.utilities.NavControllerUtil;
 import com.npucci.starwarsencyclopediaapp.viewmodels.dataListViewModel.SpeciesListViewModel;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -52,7 +49,7 @@ public class SpeciesListFragment extends Fragment {
 
         SpeciesListFragmentArgs args = SpeciesListFragmentArgs.fromBundle(getArguments());
         int[] speciesIDs = args.getSpeciesIDs();
-        speciesListViewModel.getDataListLive(speciesIDs).observe(getViewLifecycleOwner(), dataResults -> {
+        speciesListViewModel.updateDataResultsLive(speciesIDs).observe(getViewLifecycleOwner(), dataResults -> {
             List<Species> speciesList = dataResults.getResults();
 
             List<String> speciesDisplayStrings = speciesList.stream().map(species -> species.getName()).collect(Collectors.toList());

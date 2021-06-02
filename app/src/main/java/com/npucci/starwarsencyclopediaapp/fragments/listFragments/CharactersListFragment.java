@@ -15,13 +15,10 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 
 import com.npucci.starwarsencyclopediaapp.R;
-import com.npucci.starwarsencyclopediaapp.pojos.Film;
 import com.npucci.starwarsencyclopediaapp.pojos.Person;
 import com.npucci.starwarsencyclopediaapp.utilities.NavControllerUtil;
 import com.npucci.starwarsencyclopediaapp.viewmodels.dataListViewModel.CharactersListViewModel;
-import com.npucci.starwarsencyclopediaapp.viewmodels.dataViewModels.FilmsListViewModel;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -53,7 +50,7 @@ public class CharactersListFragment extends Fragment {
         CharactersListFragmentArgs args = CharactersListFragmentArgs.fromBundle(getArguments());
         int[] characterIDs = args.getCharacterIDs();
 
-        charactersListViewModel.getDataListLive(characterIDs).observe(getViewLifecycleOwner(), dataResults -> {
+        charactersListViewModel.updateDataResultsLive(characterIDs).observe(getViewLifecycleOwner(), dataResults -> {
             List<Person> charactersList = dataResults.getResults();
 
             List<String> characterDisplayStrings = charactersList.stream().map(person -> person.getName()).collect(Collectors.toList());

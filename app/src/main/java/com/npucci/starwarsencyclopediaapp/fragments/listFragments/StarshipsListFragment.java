@@ -19,7 +19,6 @@ import com.npucci.starwarsencyclopediaapp.pojos.Starship;
 import com.npucci.starwarsencyclopediaapp.utilities.NavControllerUtil;
 import com.npucci.starwarsencyclopediaapp.viewmodels.dataListViewModel.StarshipListViewModel;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -50,7 +49,7 @@ public class StarshipsListFragment extends Fragment {
 
         StarshipsListFragmentArgs args = StarshipsListFragmentArgs.fromBundle(getArguments());
         int[] starshipIDs = args.getStarshipIDs();
-        starshipListViewModel.getDataListLive(starshipIDs).observe(getViewLifecycleOwner(), dataResults -> {
+        starshipListViewModel.updateDataResultsLive(starshipIDs).observe(getViewLifecycleOwner(), dataResults -> {
             List<Starship> starshipList = dataResults.getResults();
 
             List<String> starshipDisplayStrings = starshipList.stream().map(starship -> starship.getName()).collect(Collectors.toList());
